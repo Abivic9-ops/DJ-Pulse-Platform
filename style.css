@@ -30,7 +30,7 @@ header {
 
 .nav-logo .logo-text {
     display: inline-flex;
-    gap: 25px;
+    gap: 5px;
     font-size: 28px;
       background: linear-gradient(
         to left,
