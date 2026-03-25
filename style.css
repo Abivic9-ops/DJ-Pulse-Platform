@@ -14,12 +14,13 @@ body {
 
 /* Styling of the navbar */
 header {
-    background: linear-gradient(200deg, #200438, #2f095a, #000000);
+    /* background: linear-gradient(200deg, #10021d, #190530, #000000); */
     color: #f5f3f4;
     z-index: 5;
-    position: relative;
+    position: fixed;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+    background: linear-gradient(200deg, #200438, #2f095a, #000000);
 }
 
 .dj-logo {
@@ -42,9 +43,11 @@ header {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.logo-text{
+
+.logo-text {
     display: flex;
 }
+
 .logo-text i {
     font-size: 40px;
 }
@@ -52,7 +55,7 @@ header {
 
 .navbar {
     display: flex;
-    gap: 15px;
+    gap: 5px;
     justify-content: space-around;
     align-items: center;
     padding: 15px 40px;
@@ -73,7 +76,7 @@ header {
 
 /* Nav Links */
 
-.nav-menu .nav-item  {
+.nav-menu .nav-item {
     display: flex;
     gap: 5px;
     align-items: center;
@@ -90,17 +93,17 @@ header {
     gap: 8px;
     transition: 3s ease;
 
-       padding: 10px ;
+    padding: 10px;
     border-radius: 12px;
     border: 2px solid transparent;
     background: transparent;
-    color:#ffffff;
+    color: #ffffff;
     /* box-shadow: 0 0 15px rgba(162, 89, 255, 0.4); */
     backdrop-filter: blur(15px);
 }
 
-.nav-menu .nav-item  a:hover {
-   background: linear-gradient(to left,
+.nav-menu .nav-item a:hover {
+    background: linear-gradient(to left,
             #64c4e7,
             #99b4dd,
             #c392c5,
@@ -116,31 +119,33 @@ header {
 
 /* Active button */
 .nav-menu .nav-item .active {
-    padding: 10px ;
+    padding: 10px;
     border-radius: 12px;
     border: 2px solid transparent;
     background: rgba(162, 89, 255, 0.25);
-    color:#ffffff;
+    color: #ffffff;
     /* box-shadow: 0 0 15px rgba(162, 89, 255, 0.4); */
     backdrop-filter: blur(6px);
 }
 
-.nav-actions{
-padding: 15px;
+.nav-actions {
+    padding: 15px;
+    display: flex;
+    gap: 20px;
 }
 
-.book-btn{
+.book-btn {
     font-size: 16px;
     border: none;
     border-radius: 99px;
     padding: 12px 22px;
     color: #ffffff;
     background: linear-gradient(to right,
-           #b749f6,
-           #d148d0,
-           #ec3dab);
-              backdrop-filter: blur(6px);
-  cursor: pointer;
+            #b749f6,
+            #d148d0,
+            #ec3dab);
+    backdrop-filter: blur(6px);
+    cursor: pointer;
     transition: all 0.3s ease;
     box-shadow:
         0 0 10px rgba(183, 73, 246, 0.6),
@@ -149,9 +154,282 @@ padding: 15px;
 
 }
 
-.book-btn:hover{
+.book-btn:hover {
+    scale: 1.1;
+
+}
+
+.login-btn {
+    box-shadow:
+        0 0 10px rgba(183, 73, 246, 0.6),
+        0 0 20px rgba(209, 72, 208, 0.5),
+        0 0 30px rgba(236, 61, 171, 0.4);
+
+    background: linear-gradient(to right,
+            #d148d0);
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+    color: #ffff;
+    font-size: 16px;
+    width: 60px;
+    padding: 4px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.05);
+}
+
+.login-btn:hover {
     scale: 1.1;
 
 }
 
 /* END SECTION OF THE NAVBAR */
+
+.hero-section {
+    min-height: 720px;
+    gap: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url(Assets/images/home-background\ image.png);
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(15px);
+    filter: brightness(82%) saturate(85%) contrast(95%);
+    padding-top: 5px;
+
+ }
+
+ .badge {
+    display: inline-flex;
+    gap: 5px;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 99px;
+    padding: 12px 26px;
+
+    background: linear-gradient(270deg,
+        #6130aa,
+        #713dba,
+        #3f1f99,
+        #6037b5,
+        #8f6acf,
+        #c692e6
+    );
+
+    background-size: 300% 300%;
+    animation: gradientFlow 6s ease infinite;
+
+    /* Glass feel */
+    backdrop-filter: blur(10px);
+
+    /* Base glow */
+    box-shadow: 0 0 15px rgba(140, 100, 255, 0.3);
+
+    transition: all 0.4s ease;
+}
+
+
+/* Gradient movement */
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/*  Pulse glow (music vibe) */
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 10px rgba(140, 100, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(180, 120, 255, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(140, 100, 255, 0.3);
+    }
+}
+
+.badge {
+    animation: gradientFlow 6s ease infinite, pulseGlow 3s ease-in-out infinite;
+}
+
+
+/* HOVER EFFECT */
+.badge:hover {
+    transform: translateY(-4px) scale(1.05);
+
+    /* Strong neon glow */
+    box-shadow:
+        0 0 20px rgba(180, 120, 255, 0.6),
+        0 0 40px rgba(200, 140, 255, 0.8),
+        0 0 60px rgba(220, 160, 255, 1);
+
+    /* Slight brightness boost */
+    filter: brightness(1.2);
+}
+    /* The part that swipes across the badge upon hovering */
+
+.badge::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.4),
+        transparent
+    );
+    transform: skewX(-20deg);
+}
+
+.badge:hover::after {
+    animation: shimmer 1s forwards;
+}
+
+@keyframes shimmer {
+    100% {
+        left: 150%;
+    }
+} 
+
+
+.hero-text {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.hero-text .hero-title {
+    font-size: 65px;
+    font-weight: 800;
+    background: linear-gradient(to left,
+            #c979eb,
+            #1c0f4d,
+            #415dbd,
+            #64c4e7,
+            #99b4dd,
+            #c392c5,
+            #f669be,
+            #d446ca,
+            #c57aff,
+            #442da4,
+            #592f9d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-text p {
+    color: #000000;
+    font-size: 24px;
+}
+
+/* stats */
+.stats {
+    display: flex;
+    gap: 25px;
+}
+
+.stats-box {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #6e369c;
+    width: 200px;
+    height: 140px;
+    border-radius: 20px;
+    padding: 25px;
+    /* border: 2px solid #2f1e53; */
+    color: #fff;
+    transition: .3s ease-in-out;
+}
+
+.stats-box:hover {
+    background: rgb(0, 0, 0, 0.25);
+    transform: translateY(-15px);
+
+}
+
+.stats-box .icon i {
+    color: #c64ae2;
+    font-size: 26px;
+}
+
+.stats-box p {
+    font-size: 16px;
+}
+
+.buttons-more {
+    padding: 15px;
+    display: flex;
+    gap: 20px;
+}
+
+.btn-explore {
+    font-size: 16px;
+    border: none;
+    border-radius: 99px;
+    padding: 20px 35px;
+    color: #ffffff;
+
+    background: linear-gradient(270deg,
+        #b652f0,
+        #d351d3,
+        #f14ab4
+    );
+
+    background-size: 200% 200%;
+    animation: gradientMove 4s ease infinite;
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(241, 74, 180, 0.4);
+    transition: all 0.35s ease;
+}
+
+
+/* Gradient movement */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.btn-explore:hover {
+    transform: translateY(-5px) scale(1.05);
+    filter: brightness(1.2);
+}
+
+
+.btn-events {
+    background: #1b0533;
+    font-size: 18px;
+    border: 2px solid #c27aff;
+    border-radius: 99px;
+    padding: 20px 35px;
+    cursor: pointer;
+    color: #ffffff;
+    transition: 0.5s all ease;
+}
+
+.btn-events:hover {
+    background: rgb(0, 0, 0, 0.15);
+    border-color: rgba(255, 255, 255, 0.2);
+    opacity: 0.6;
+    color: white;
+    scale: 1.1;
+
+}
