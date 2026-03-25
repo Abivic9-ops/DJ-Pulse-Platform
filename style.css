@@ -14,14 +14,15 @@ body {
 
 /* Styling of the navbar */
 header {
-    background: linear-gradient(200deg, #240440, #3a0a70, #000000);
+    background: linear-gradient(200deg, #200438, #2f095a, #000000);
     color: #f5f3f4;
     z-index: 5;
     position: relative;
-      backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 }
-.dj-logo{
+
+.dj-logo {
     display: flex;
     gap: 10px;
     align-items: center;
@@ -32,149 +33,125 @@ header {
     display: inline-flex;
     gap: 5px;
     font-size: 28px;
-      background: linear-gradient(
-        to left,
-        #64c4e7,
-        #99b4dd,
-        #c392c5,
-        #f669be,
-        #c57aff
-    );
+    background: linear-gradient(to left,
+            #64c4e7,
+            #99b4dd,
+            #c392c5,
+            #f669be,
+            #c57aff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
-.logo-text i{
-    font-size: 35px;
+.logo-text{
+    display: flex;
+}
+.logo-text i {
+    font-size: 40px;
 }
 
 
 .navbar {
     display: flex;
-    justify-content: space-between;
-    align-items: center; 
-       padding: 15px 40px;
-    position: relative;  
+    gap: 15px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 40px;
+    position: relative;
 
 }
 
 .nav-menu {
     list-style: none;
     display: flex;
-    gap: 35px;
+    gap: 15px;
 }
 
-.nav-item .nav-link {
+.nav-item {
     color: #d1d5dc;
 
 }
 
-a {
+/* Nav Links */
+
+.nav-menu .nav-item  {
+    display: flex;
+    gap: 5px;
+    align-items: center;
     text-decoration: none;
 }
 
-button {
-    cursor: pointer;
-
-}
-
-.navbar .nav-menu .nav-link {
-    padding: 10px 10px;
-    font-size: 17px;
-    border-radius: 25px;
-    transition: 0.3sec ease-in-out;
-}
-
-.navbar .nav-menu .nav-link:hover {
-    color: #37a1f2;
-    background: #f49b23;
-} */
-
-/* 
-.navbar {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-
-    padding: 12px 40px;
-
-    /* GLASSMORPHISM */
-/* background: rgba(15, 20, 50, 0.35);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-} 
- */
-
-/* .ul {
-    list-style: none;
-}
-
-a {
+.nav-menu .nav-item a {
+    font-weight: 400;
     text-decoration: none;
-}
-
-button {
-    cursor: pointer;
-   
-}
-
-img {
-    width: 100%;
-}
-
-.section-content {
-    max-width: var(--site-max-width);
-    padding: 0 20px;
-    margin: 0 auto;
-}
-
-/*Navbar Styling*/
-/* header {
-    background: #3f181c;
-    color: #f5f3f4;
-    z-index: 5;
-    position:relative;
-}
-
-header .navbar {
+    color: #cfd8ff;
+    font-size: 16px;
     display: flex;
     align-items: center;
-    padding: 20px;
-    justify-content: space-between;
+    gap: 8px;
+    transition: 3s ease;
+
+       padding: 10px ;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    background: transparent;
+    color:#ffffff;
+    /* box-shadow: 0 0 15px rgba(162, 89, 255, 0.4); */
+    backdrop-filter: blur(15px);
 }
 
-.navbar .nav-menu .nav-link {
-    color: var(--white-color);
-    padding: 10px 10px;
-    font-size: 17px;
-    border-radius: 25px;
-    transition: 0.3sec ease-in-out;
+.nav-menu .nav-item  a:hover {
+   background: linear-gradient(to left,
+            #64c4e7,
+            #99b4dd,
+            #c392c5,
+            #f669be,
+            #c57aff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 2px solid #c34ae6;
+    transform: translateX(6px);
+    scale: 0.9;
+    transform: translateY(-4px);
 }
 
-.navbar .nav-menu .nav-link:hover {
-    color: #37a1f2;
-    background: #f49b23;
+/* Active button */
+.nav-menu .nav-item .active {
+    padding: 10px ;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    background: rgba(162, 89, 255, 0.25);
+    color:#ffffff;
+    /* box-shadow: 0 0 15px rgba(162, 89, 255, 0.4); */
+    backdrop-filter: blur(6px);
 }
 
-
-.navbar .nav-menu {
-    display: flex;
-    gap: 1em;
+.nav-actions{
+padding: 15px;
 }
 
-.logo-text {
-    color: #f5f3f4;
-    font-size: 30px;
-    font-style: 600;
+.book-btn{
+    font-size: 16px;
+    border: none;
+    border-radius: 99px;
+    padding: 12px 22px;
+    color: #ffffff;
+    background: linear-gradient(to right,
+           #b749f6,
+           #d148d0,
+           #ec3dab);
+              backdrop-filter: blur(6px);
+  cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow:
+        0 0 10px rgba(183, 73, 246, 0.6),
+        0 0 20px rgba(209, 72, 208, 0.5),
+        0 0 30px rgba(236, 61, 171, 0.4);
 
 }
 
-.nav-menu {
-    list-style: none;
-} 
+.book-btn:hover{
+    scale: 1.1;
+
+}
+
+/* END SECTION OF THE NAVBAR */
