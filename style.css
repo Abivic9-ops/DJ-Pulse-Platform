@@ -695,14 +695,14 @@ header {
 
 .upcoming-events {
     height: 150vh;
-    padding: 45px;
+    padding: 25px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
 
     background: linear-gradient(to right,
             #1b0e49,
-            #5915a7,
+            #5c229e,
             #7212c7);
 }
 
@@ -937,4 +937,160 @@ header {
 .events-box-icons i {
     color: #a64ff8;
     font-size: 16px;
+}
+
+/* THE EXPERIENCE SECTION */
+ .experience-section{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to right,
+            #1b0e49,
+            #5c229e,
+            #7212c7);
+  
+}
+
+.experience-main{
+border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 45px;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  border-radius: 25px;
+    background: linear-gradient(
+        120deg,
+        #1b0e49,
+        #5c229e,
+        #c57aff,
+        #f669be
+    );
+    background-size: 400% 400%;
+
+    animation: gradientPulse 12s ease infinite;
+}
+
+@keyframes gradientPulse {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.experience-main::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 30%, rgba(246,105,190,0.15), transparent 40%),
+                radial-gradient(circle at 70% 60%, rgba(100,196,231,0.15), transparent 40%);
+    animation: lightsMove 6s infinite alternate;
+    z-index: 0;
+}
+
+
+@keyframes lightsMove {
+    from { transform: translateX(-25px) translateY(-10px); }
+    to { transform: translateX(25px) translateY(10px); }
+}
+
+
+.experience-content {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+    padding: 20px;
+    animation: fadeUp 1s ease forwards;
+}
+
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.experience-content h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #fff;
+    text-shadow: 0 0 10px #c57aff, 0 0 20px #f669be;
+    transition: all 0.3s ease;
+}
+
+.experience-content h1:hover {
+    text-shadow: 0 0 20px #c57aff, 0 0 40px #f669be, 0 0 60px #f669be;
+}
+
+
+.experience-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin-bottom: 30px;
+}
+
+
+.section-btn {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    transform: translateY(-20px);
+    opacity: 0;
+    animation: dropIn 1s ease forwards;
+    animation-delay: 0.4s;
+}
+
+@keyframes dropIn {
+    to { transform: translateY(0); opacity: 1; }
+}
+
+
+.section-btn button {
+   
+}
+
+
+.view-tours-btn {
+    background: white;
+ border: none;
+    border-radius: 99px;
+    padding: 20px 35px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #a510fa;
+}
+
+
+.shop-btn {
+    border-radius: 99px;
+    padding: 20px 35px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #ffffff;
+    background:transparent;
+    border: 2px solid white;
+}
+
+
+.section-btn button:hover {
+        background: rgb(0, 0, 0, 0.15);
+    transform: translateY(-3px) scale(1.07);
+    box-shadow: 0 0 25px rgba(216, 107, 172, 0.8), 0 0 40px rgba(199,122,255,0.6);
+}
+
+
+.section-btn button:active {
+    transform: scale(0.95);
 }
