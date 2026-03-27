@@ -1151,7 +1151,7 @@ header {
 
 .footer-dj-info {
     flex: 1;
-    max-width: 400px; 
+    max-width: 450px; 
 }
 .logo-text {
     font-size: 22px;
@@ -1211,7 +1211,6 @@ header {
     font-size: 16px;
     display: flex;
     align-items: center;
-
     gap: 10px;
     transition: 0.3s ease;
 }
